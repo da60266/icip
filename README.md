@@ -18,3 +18,9 @@ This command include the training and testing process for MPIIFaceGaze leave-one
 Our code include two environments for training and 3DMM fitting, respectively. You can use requirement.txt and requirement2.txt to create the enviroments.
 
 ## 3DMM Fitting
+You can perform single-image 3DMM fitting using below command
+
+```
+python photometric_fitting.py
+```
+To be noted, you should change the 'input_folder' to your data root.
