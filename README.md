@@ -41,19 +41,3 @@ To perform single-image 3DMM fitting, run:
 python photometric_fitting.py
 ```
 To be noted, you should change the 'input_folder' to your data root.
-
-## Citation
-if you use this code, please consider citing our paper:
-
-```
-@INPROCEEDINGS{11084621,
-  author={Zhou, Siyuan and Tan, Qida and Du, Wenchao and Chen, Hu and Yang, Hongyu},
-  booktitle={2025 IEEE International Conference on Image Processing (ICIP)}, 
-  title={Learning Geometry-Aware Representation for Gaze Estimation}, 
-  year={2025},
-  volume={},
-  number={},
-  pages={1930-1935},
-  keywords={Geometry;Adaptation models;Three-dimensional displays;Accuracy;Image processing;Estimation;Performance gain;Robustness;Faces;Gaze estimation;geometry-aware representation;normal map;cross-domain generalization},
-  doi={10.1109/ICIP55913.2025.11084621}}
-```
