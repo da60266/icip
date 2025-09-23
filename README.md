@@ -1,26 +1,59 @@
-# Code for **Learning Geometric-aware Representation For Gaze Estimation**
+# GALNet
+Official implementation of our method for gaze estimation with geometric-aware representation learning.
 
 ## Usage
 
-You can perform two steps to run our codes.
-1. Prepare the data and fit the 3DMM model.
-2. Run the commands.
+The pipeine consists of two main steps:
+1. Prepare the data and perform 3DMM fitting.
+2. Run training and evaluation.
 
-We recommand you to run our code using
+For convenience, we provide a shell script to run MPIIFaceGaze leave-one-person out evaluation:
 
 ```
 bash train_aaai.sh
 ```
 
-This command include the training and testing process for MPIIFaceGaze leave-one-person-out evaluation.
+This script will automatically train and test the model across subjects.
 
 ## Environments
-Our code include two environments for training and 3DMM fitting, respectively. You can use requirement.txt and requirement_flame.txt to create the enviroments.
+We provide two separate environments:
+1. Training
+2. 3DMM fitting
+Create them using the provided requirement files:
+
+```
+# Training environment
+conda create -n gaze_train python=3.8
+conda activate gaze_train
+pip install -r requirements.txt
+
+# 3DMM fitting environment
+conda create -n gaze_flame python=3.8
+conda activate gaze_flame
+pip install -r requirements_flame.txt
+
+```
 
 ## 3DMM Fitting
-You can perform single-image 3DMM fitting using below command
+To perform single-image 3DMM fitting, run:
 
 ```
 python photometric_fitting.py
 ```
 To be noted, you should change the 'input_folder' to your data root.
+
+## Citation
+if you use this code, please consider citing our paper:
+
+```
+@INPROCEEDINGS{11084621,
+  author={Zhou, Siyuan and Tan, Qida and Du, Wenchao and Chen, Hu and Yang, Hongyu},
+  booktitle={2025 IEEE International Conference on Image Processing (ICIP)}, 
+  title={Learning Geometry-Aware Representation for Gaze Estimation}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1930-1935},
+  keywords={Geometry;Adaptation models;Three-dimensional displays;Accuracy;Image processing;Estimation;Performance gain;Robustness;Faces;Gaze estimation;geometry-aware representation;normal map;cross-domain generalization},
+  doi={10.1109/ICIP55913.2025.11084621}}
+```
