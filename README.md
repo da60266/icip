@@ -28,7 +28,7 @@ conda activate gaze_train
 pip install -r requirements.txt
 
 # 3DMM fitting environment
-conda create -n gaze_flame python=3.8
+conda create -n gaze_flame python=3.9
 conda activate gaze_flame
 pip install -r requirements_flame.txt
 
